@@ -14,12 +14,10 @@ public class Movie {
     String posterPath;
     String title;
     String overview;
-    Double rating;
+    double rating;
 
     // empty constructor needed by the Parceler library
-    public Movie(){
-
-    }
+    public Movie(){ }
 
     public Movie(JSONObject jsonObject) throws JSONException {
         posterPath= jsonObject.getString("poster_path");
@@ -49,7 +47,7 @@ public class Movie {
         return overview;
     }
 
-    public Double getRating() {
+    public double getRating() {
         return rating;
     }
 }
